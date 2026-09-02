@@ -1,0 +1,24 @@
+/* ALLA BILDER! */
+img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgBox {
+    border: 1px solid black;
+    aspect-ratio: 1 / 1;
+}
+
+main {
+    display: grid;
+    gap: 30px;
+}
+
+@media(min-width: 600px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 30px;
+    }
+}
