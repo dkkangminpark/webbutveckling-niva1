@@ -1,0 +1,36 @@
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+main {
+    border: 1px solid red;
+    min-height: 20vh;
+    display: grid;
+    padding: 3%;
+    gap: 20px;
+}
+
+.imgBox {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+
+}
+
+img:hover {
+    transform: scale(1.3);
+
+}
+
+@media(min-width: 500px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imgBox {
+        border-radius: 50%;
+    }
+}
