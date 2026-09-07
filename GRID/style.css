@@ -1,0 +1,35 @@
+html {
+    background-color: #1e1e2e;
+}
+
+header, main, footer, .content {
+    border: 1px solid black;
+    min-height: 10vh;
+    padding: 3%;
+    background-color: #313244;
+}
+
+.content {
+    background-color: #11111b;
+}
+
+.content:nth-of-type(4) {
+    background-color: yellow;
+    grid-column: 1/-1;
+}
+
+.third {
+    background-color: red;
+}
+
+main {
+    display: grid;
+    gap: 10px;
+    row-gap: 20px;
+}
+
+@media(min-width: 600px) {
+    main{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
