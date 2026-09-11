@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKS TOGGLE MENU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button onclick="toggleMenu()" class="menuButton">&equiv;</button>
+        <nav id="nav" class="nav">
+            <a href="#c1">link 1</a>
+            <a href="#c2">link 2</a>
+            <a href="#c3">link 3</a>
+            <a href="#c4">link 4</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content" id="c1">CONTENT 1</div>
+        <div class="content" id="c2">CONTENT 2</div>
+        <div class="content" id="c3">CONTENT 3</div>
+        <div class="content" id="c4">CONTENT 4</div>
+    </main>
+    <footer>
+        <h3>END OF PAGE YOU FUCKING SUCKER</h3>
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav").classList.toggle("hidden")
+        }
+    </script>
+</body>
+</html>

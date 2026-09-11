@@ -1,0 +1,15 @@
+html {
+    background-color: #11111b;
+    color: #cdd6f4;
+}
+
+header, main, footer, nav {
+    border: 1px solid #cba6f7;
+    background-color: #1e1e2e;
+    min-height: 10vh;
+    padding: 3%;
+}
+
+main {
+    min-height: 50vh;
+}

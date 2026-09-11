@@ -1,0 +1,54 @@
+html {
+    background-color: #11111b;
+    color: #cdd6f4;
+}
+
+header, main, footer, nav, .content{
+    border: 1px solid #cba6f7;
+    background-color: #1e1e2e;
+    min-height: 10vh;
+    padding: 3%;
+}
+
+header {
+    background-color: #313244;
+}
+
+main {
+    min-height: 50vh;
+}
+
+.content {
+    background-color: #7f849c;
+    min-height: 60vh;
+    display: none;
+}
+
+:target{
+    display: block;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display:grid;
+    gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media(min-width: 600px) {
+    nav #nav{
+        grid-template-columns: repeat(4,1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    .menuButton {
+        display: none;
+    }
+}
