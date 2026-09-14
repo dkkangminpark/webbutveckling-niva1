@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 html {
     background-color: #11111b;
     color: #cdd6f4;
@@ -12,6 +17,16 @@ header, main, footer, nav, .content{
 
 header {
     background-color: #313244;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header>button {
+    border: none;
+    background-color: transparent;
+    font-size: 3rem;
 }
 
 main {
@@ -22,6 +37,7 @@ main {
     background-color: #7f849c;
     min-height: 60vh;
     display: none;
+    margin-top: 19vh;
 }
 
 :target{
@@ -43,10 +59,11 @@ nav {
 }
 
 @media(min-width: 600px) {
-    nav #nav{
+    nav.nav{
         grid-template-columns: repeat(4,1fr);
         align-items: center;
         justify-items: center;
+        display: grid;
     }
     .menuButton {
         display: none;
