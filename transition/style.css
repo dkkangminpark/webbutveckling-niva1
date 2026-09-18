@@ -1,0 +1,13 @@
+.melkerbox {
+    padding: 4%;
+    height: 30vh;
+    border: 3px solid red;
+    margin-top: 30px;
+    transition: all 1s linear;
+    overflow: hidden;
+}
+
+.hidden{
+    height: 0vh;
+    padding: 0%;
+}
