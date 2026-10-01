@@ -7,13 +7,30 @@
 
 html {
     background-color: #11111b;
+    scroll-behavior: smooth;
 }
 
 header, main, footer, nav {
-    border: 1px solid red;
     min-height: 10vh;
     padding: 3%;
     background-color: #181825;
+}
+
+main {
+    min-height: 140vh;
+}
+
+nav {
+    border-radius: 20px;
+}
+img {
+    width: 100%;
+    display: block;
+}
+
+.imgBox {
+    padding: 0;
+    border-radius: 10px;
 }
 
 .menuButton {
@@ -21,6 +38,19 @@ header, main, footer, nav {
     background-color: transparent;
     cursor: pointer;
     font-size: 2.5rem;
+}
+
+.cardGrid {
+    display: grid;
+    gap: 15px;
+}
+
+.card {
+    display: grid;
+    gap: 10px;
+    background-color: #313244;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .menuButton:hover {
@@ -48,9 +78,26 @@ nav a:hover {
 }
 
 @media(min-width:600px) {
-    nav {
+    .imgBox {
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    nav.myNav {
         grid-template-columns: repeat(3,1fr);
         place-items: center;
         display: grid;
+    }
+
+    .menuButton {
+        display: none;
+    }
+
+    .cardGrid {
+        grid-template-columns: repeat(2,1fr);
     }
 }

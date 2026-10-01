@@ -1,0 +1,410 @@
+# Web Development — Mock Examination
+
+## Task: Create a Website About Swedish Trains
+
+Create a small, responsive website about **Swedish trains**.
+
+The website should have a similar structure to the example you practiced, but you should build it yourself from scratch.
+
+You must create:
+
+```text
+index.html
+about.html
+style.css
+client.js
+img/
+```
+
+You may choose the exact images, text, colors and visual design yourself.
+
+---
+
+# 1. Home Page — `index.html`
+
+## Header
+
+Create a header containing:
+
+* A menu button
+* A navigation menu
+* A link to `HOME`
+* A link to `CONTACT`
+* A link to `ABOUT`
+
+The menu button must run:
+
+```javascript
+toggleMenu()
+```
+
+when clicked.
+
+Your navigation should look something like:
+
+```text
+HOME    CONTACT    ABOUT
+```
+
+The `CONTACT` link should jump to the contact section at the bottom of the page.
+
+The `ABOUT` link should open `about.html`.
+
+The `HOME` link should open `index.html`.
+
+---
+
+# 2. Main Content
+
+Create a **card grid** containing at least **3 train cards**.
+
+Each card must contain:
+
+* A heading
+* An image
+* A paragraph
+* Padding
+* Rounded corners
+* Spacing between its elements
+
+You could use:
+
+### Card 1 — X2000
+
+An image and description of the X2000.
+
+### Card 2 — Öresundståg
+
+An image and description of Öresundståg.
+
+### Card 3 — SJ Regional
+
+An image and description of an SJ regional train.
+
+You can use different trains instead.
+
+The cards should be displayed using:
+
+```css
+display: grid;
+```
+
+---
+
+# 3. Images
+
+Each card must have an image.
+
+Images should:
+
+* Have `width: 100%`
+* Fit inside their image container
+* Use `object-fit` where appropriate
+* Have rounded corners or otherwise fit the card design
+
+On larger screens, make the image containers square using:
+
+```css
+aspect-ratio: 1 / 1;
+```
+
+You should also prevent the image from overflowing its container.
+
+---
+
+# 4. Responsive Grid
+
+The cards should change depending on the screen size.
+
+### Small screen
+
+Display one card per row:
+
+```text
+┌─────────────┐
+│   X2000     │
+└─────────────┘
+
+┌─────────────┐
+│ Öresundståg │
+└─────────────┘
+
+┌─────────────┐
+│ SJ Regional │
+└─────────────┘
+```
+
+### Larger screen
+
+Display multiple cards per row:
+
+```text
+┌──────────┐ ┌──────────┐ ┌──────────┐
+│  X2000   │ │Öresund...│ │SJ Region.│
+└──────────┘ └──────────┘ └──────────┘
+```
+
+Use a media query such as:
+
+```css
+@media (min-width: 600px) {
+    ...
+}
+```
+
+You decide the exact breakpoint and number of columns.
+
+---
+
+# 5. Card Hover Effect
+
+Add a hover effect to the cards.
+
+For example, the card could move slightly upward when the mouse is over it.
+
+You **must** use:
+
+```css
+transition
+```
+
+so that the animation is smooth.
+
+You may also make the image zoom slightly when hovering.
+
+---
+
+# 6. About Page — `about.html`
+
+Create a separate page about Swedish trains.
+
+It must contain:
+
+* The same header
+* The same navigation
+* A heading
+* At least **two paragraphs**
+* At least one image
+* The same footer
+
+The navigation must work from both pages.
+
+For example, the page could explain:
+
+* How Swedish railways work
+* Different types of passenger trains
+* Why trains are important for transportation in Sweden
+
+---
+
+# 7. Footer
+
+Both pages must have a footer.
+
+The footer must contain a contact section with:
+
+```text
+CONTACT
+
+EMAIL: trains@example.com
+
+BACK TO TOP!
+```
+
+The contact section should have:
+
+```html
+id="contact"
+```
+
+so that the navigation can link to it.
+
+The `BACK TO TOP!` link should take the user to the top of the page.
+
+---
+
+# 8. JavaScript — `client.js`
+
+Create:
+
+```javascript
+function toggleMenu() {
+    ...
+}
+```
+
+The function must show and hide the navigation menu.
+
+Use:
+
+```javascript
+classList.toggle()
+```
+
+and a CSS class such as:
+
+```text
+hidden
+```
+
+For example:
+
+```javascript
+document.querySelector("nav").classList.toggle("hidden")
+```
+
+You should also make sure the CSS actually hides the navigation when that class is applied.
+
+---
+
+# 9. CSS Requirements
+
+Your CSS must include and use:
+
+```css
+margin
+padding
+box-sizing
+font-family
+background-color
+color
+border-radius
+gap
+display: grid
+@media
+transition
+```
+
+You should style:
+
+* The page
+* Header
+* Navigation
+* Main content
+* Cards
+* Images
+* Footer
+* Links
+* Menu button
+
+Try to make the design look intentional rather than just adding the properties because they are required.
+
+---
+
+# 10. Minimum Requirements
+
+Before you consider the exercise finished, check that you have:
+
+☐ `index.html`
+
+☐ `about.html`
+
+☐ `style.css`
+
+☐ `client.js`
+
+☐ Header
+
+☐ Navigation
+
+☐ Working HOME link
+
+☐ Working ABOUT link
+
+☐ Working CONTACT link
+
+☐ Contact section
+
+☐ Back-to-top link
+
+☐ At least 3 cards
+
+☐ At least 3 images
+
+☐ CSS Grid
+
+☐ Responsive layout
+
+☐ Media query
+
+☐ `border-radius`
+
+☐ `gap`
+
+☐ Hover effect
+
+☐ `transition`
+
+☐ JavaScript menu
+
+☐ `classList.toggle()`
+
+---
+
+# 11. Extra Challenges
+
+Once everything above works, try these:
+
+### Challenge 1
+
+Make the navigation links change appearance when hovered.
+
+### Challenge 2
+
+Make the train image zoom slightly when hovering over the card.
+
+### Challenge 3
+
+Add a fourth train card.
+
+### Challenge 4
+
+Make the cards have equal-looking image areas even when the original images have different dimensions.
+
+### Challenge 5
+
+Make the mobile menu look different from the desktop navigation.
+
+---
+
+# Practice Conditions
+
+Try to start with an **empty folder**.
+
+Do not copy the Sabrina Carpenter website and simply replace the text.
+
+You may look up the syntax for individual HTML, CSS or JavaScript features, but try to write the structure yourself.
+
+### Recommended time
+
+**60–90 minutes:** Basic requirements
+
+**20–30 minutes:** Extra challenges and debugging
+
+The most important thing is that you can explain what your code does.
+
+You should particularly understand:
+
+```html
+<header>
+<main>
+<footer>
+```
+
+```css
+display: grid;
+```
+
+```css
+@media
+```
+
+```css
+transition
+```
+
+and:
+
+```javascript
+classList.toggle()
+```
