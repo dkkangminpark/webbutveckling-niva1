@@ -37,8 +37,9 @@ nav a:hover {
 
 main {
     display: grid;
-    gap: 20px;
     grid-template-columns: 1fr;
+    gap: 20px;
+
 }
 
 img {
@@ -88,9 +89,17 @@ img {
     font-size: 1.5rem;
     border: 3px solid #cdd6f4;
     background-color: transparent;
+    width: max-content;
+    padding: 5px;
 }
 main .bangard{
     aspect-ratio: 4/1;
+}
+
+.gap {
+    display: grid;
+    gap: 5px;
+    padding: 0;
 }
 
 @media(min-width: 600px) {

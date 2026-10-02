@@ -10,7 +10,7 @@
   <body>
     <header>
       <button class="menuButton" onclick="toggleMenu()">&equiv;</button>
-      <nav class="myNav">
+      <nav class="myNav hidden" onclick="toggleMenu()">
         <a href="index.html">HOME</a>
         <a href="#contact">CONTACT</a>
         <a href="about.html">ABOUT</a>
@@ -44,8 +44,10 @@
     <footer>
         <div id="contact">
             <h3>CONTACT</h3>
-            <p style="margin-bottom: 10px;"><b>MAIL:</b> <a href="mailto:trains@example.com">trains@example.com</a></p>
+            <div class="gap">
+            <p><b>MAIL:</b> <a href="mailto:trains@example.com">trains@example.com</a></p>
             <a href="#top" id="btt">BACK TO TOP</a>
+            </div>
         </div>
     </footer>
   </body>
