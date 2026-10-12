@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDANTAG</title>
+    <style>
+        .box, .content {
+            border: 1px solid;
+            min-height: 5vh;
+            padding:3%;
+        }
+
+        .content:first-of-type {
+            background-color: blueviolet;
+            grid-area: first;
+        }
+
+        .content:nth-of-type(2) {
+            background-color: forestgreen;
+            grid-area: second;
+        }
+
+        .content:nth-of-type(3) {
+            background-color: hotpink;
+            grid-area: third;
+        }
+
+        .content:last-of-type {
+            background-color: powderblue;
+            grid-area: last;
+        }
+
+        .box {
+            display: grid;
+            aspect-ratio: 16/9;
+            grid-template-areas: "main";
+            place-items: center;
+        }
+
+        .box>* {
+            grid-area: main;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+/*             display: block; */
+        }
+        
+        button {
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+<!--         <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div> -->
+
+        <img src="apolo-photographer-xmksM4em7a0-unsplash.jpg" alt="">
+        <button>I broke the rule</button>
+    </div>
+</body>
+</html>

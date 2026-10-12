@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <style>
+        .content {
+            border:1px solid;
+            padding: 3%;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button onclick="showContent('.b1')">b 1</button>
+            <button onclick="showContent('.b2')">b 2</button>
+            <button onclick="showContent('.b3')">b 3</button>
+        </nav>
+    </header>
+    <div class="content b1">
+        <h2>nr 1</h2>
+    </div>
+    <div class="content b2">
+        <h2>nr 2</h2>
+    </div>
+    <div class="content b3">
+        <h2>nr 3</h2>
+    </div>
+    <script>
+        hideAll();
+        showContent(".b1");
+        
+        function showContent(cl) {
+            hideAll();
+            document.querySelector(cl).classList.remove("hidden");
+        }
+
+        function hideAll() {
+            const content = document.querySelectorAll(".content");
+            for(let div of content){
+                div.classList.add("hidden");
+            }
+        }
+    </script>
+</body>
+</html>
